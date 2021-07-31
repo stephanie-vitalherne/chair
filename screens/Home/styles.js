@@ -39,25 +39,11 @@ const styles = StyleSheet.create({
     color: COLORS.black,
     ...FONTS.largeTitle
   },
-  tabMainContainer: {
-    marginTop: SIZES.padding
+  cardContainer: {
+    flex: 1
   },
-  tabContainer: {
-    marginHorizontal: SIZES.padding
-  },
-  tabName: {
-    color: COLORS.secondary,
-    ...FONTS.body2
-  },
-  tabInner: {
-    alignItems: 'center',
-    marginTop: SIZES.base
-  },
-  tabCircle: {
-    height: 10,
-    width: 10,
-    borderRadius: 5,
-    backgroundColor: COLORS.blue
+  footerContainer: {
+    height: '19%'
   }
 });
 

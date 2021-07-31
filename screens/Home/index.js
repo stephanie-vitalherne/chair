@@ -12,7 +12,7 @@ import { styles } from './styles';
 import { data, tabs } from './data';
 
 // COMPONENTS
-import { ScrollableTab } from '../../components';
+import { ScrollableTab, ScrollableCard } from '../../components';
 
 const Home = ({ navigation }) => {
   const [tabList, setTabList] = useState(data);
@@ -65,6 +65,16 @@ const Home = ({ navigation }) => {
         selectedTab={selectedTab}
         onPress={item => setSelectedTab(item)}
       />
+
+      <View style={styles.cardContainer}>
+        <ScrollableCard
+          navigation={navigation}
+          productList={selectedTab.productList}
+        />
+      </View>
+
+      {/* Footer - Promotion Card */}
+      <View style={styles.footerContainer}></View>
     </SafeAreaView>
   );
 };
