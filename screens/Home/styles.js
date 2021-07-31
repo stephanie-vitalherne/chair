@@ -43,7 +43,55 @@ const styles = StyleSheet.create({
     flex: 1
   },
   footerContainer: {
-    height: '19%'
+    height: '19%',
+    justifyContent: 'flex-end'
+  },
+  promoContainer: {
+    flexDirection: 'row',
+    marginHorizontal: SIZES.padding,
+    padding: SIZES.radius,
+    height: 110,
+    borderRadius: 20,
+    backgroundColor: COLORS.white
+  },
+  sofaContainer: {
+    width: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: COLORS.lightGray2,
+    borderRadius: 20
+  },
+  sofa: {
+    width: '60%',
+    height: '60%'
+  },
+  wordContainer: {
+    flex: 1,
+    marginLeft: SIZES.radius,
+    justifyContent: 'center'
+  },
+  wordTitle: {
+    ...FONTS.h2
+  },
+  wordCart: {
+    ...FONTS.body3
+  },
+  wordBtnContainer: {
+    marginRight: SIZES.radius,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  wordBtn: {
+    backgroundColor: COLORS.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '70%',
+    width: 40,
+    borderRadius: 10
+  },
+  wordImage: {
+    width: '50%',
+    height: '50%'
   }
 });
 

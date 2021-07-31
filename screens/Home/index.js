@@ -54,6 +54,39 @@ const Home = ({ navigation }) => {
     );
   }
 
+  function renderPromotionCard() {
+    return (
+      <View style={[styles.promoContainer, styles.shadow]}>
+        <View style={styles.sofaContainer}>
+          <Image
+            source={images.sofa}
+            resizeMode="contain"
+            style={styles.sofa}
+          />
+        </View>
+
+        {/* Wording */}
+        <View style={styles.wordContainer}>
+          <Text style={styles.wordTitle}>Special Offer</Text>
+          <Text style={styles.wordCart}>Adding to your cart</Text>
+        </View>
+
+        {/* Button */}
+        <View style={styles.wordBtnContainer}>
+          <TouchableOpacity
+            style={styles.wordBtn}
+            onPress={() => console.log('Button')}>
+            <Image
+              style={styles.wordImage}
+              source={icons.chevron}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.mainContainer}>
       {renderHeader()}
@@ -74,7 +107,7 @@ const Home = ({ navigation }) => {
       </View>
 
       {/* Footer - Promotion Card */}
-      <View style={styles.footerContainer}></View>
+      <View style={styles.footerContainer}>{renderPromotionCard()}</View>
     </SafeAreaView>
   );
 };
