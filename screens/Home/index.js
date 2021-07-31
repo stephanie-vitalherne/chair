@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native';
-import { COLORS, SIZES, FONTS, images, icons } from '../../constants';
+import { images, icons } from '../../constants';
 import { styles } from './styles';
 import { data, tabs } from './data';
 
@@ -15,7 +15,7 @@ import { data, tabs } from './data';
 import { ScrollableTab, ScrollableCard } from '../../components';
 
 const Home = ({ navigation }) => {
-  const [tabList, setTabList] = useState(data);
+  const [tabList] = useState(data);
   const [selectedTab, setSelectedTab] = useState(tabs);
 
   function renderHeader() {
