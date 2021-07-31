@@ -90,6 +90,44 @@ const styles = StyleSheet.create({
     marginTop: SIZES.radius,
     color: COLORS.white,
     ...FONTS.h1
+  },
+  footerContainer: {
+    position: 'absolute',
+    bottom: '5%',
+    left: SIZES.padding,
+    right: SIZES.padding,
+    flexDirection: 'row',
+    height: 70,
+    backgroundColor: COLORS.white,
+    borderRadius: 35
+  },
+  foot1: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  foot2: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  footIcon: {
+    width: 25,
+    height: 25,
+    tintColor: COLORS.gray
+  },
+  middleBtn: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 50,
+    width: 50,
+    borderRadius: 10,
+    backgroundColor: COLORS.primary
+  },
+  middle: {
+    width: 20,
+    height: 20,
+    tintColor: COLORS.white
   }
 });
 

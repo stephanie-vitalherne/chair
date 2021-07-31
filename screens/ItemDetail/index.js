@@ -7,7 +7,7 @@ import {
   ImageBackground,
   TouchableOpacity
 } from 'react-native';
-import { COLORS, SIZES, FONTS, images, icons } from '../../constants';
+import { icons } from '../../constants';
 import { styles } from './styles';
 
 const ItemDetail = ({ route, navigation }) => {
@@ -73,7 +73,44 @@ const ItemDetail = ({ route, navigation }) => {
     }
   }
 
-  return <View style={styles.mainContainer}>{renderInfo()}</View>;
+  function renderFooter() {
+    return (
+      <View style={styles.footerContainer}>
+        <View style={styles.foot1}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Image
+              resizeMode="contain"
+              source={icons.dashboard}
+              style={styles.footIcon}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.foot2}>
+          <TouchableOpacity
+            style={styles.middleBtn}
+            onPress={() => console.log('Add')}>
+            <Image
+              style={styles.middle}
+              resizeMode="contain"
+              source={icons.plus}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.foot1}>
+          <TouchableOpacity onPress={() => console.log('Profile')}>
+            <Image style={styles.footIcon} source={icons.user} resizeMode="" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
+  return (
+    <View style={styles.mainContainer}>
+      {renderInfo()}
+      {renderFooter()}
+    </View>
+  );
 };
 
 export default ItemDetail;
